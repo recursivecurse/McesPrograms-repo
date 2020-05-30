@@ -1,2 +1,2 @@
 Dependencies for Project 'Experiment1A', Target 'Target 1': (DO NOT MODIFY !)
-F (.\exp1.asm)(0x5ED26D85)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\exp1.lst --xref -o .\objects\exp1.o --depend .\objects\exp1.d)
+F (.\exp1.asm)(0x5ED2ABFE)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\exp1.lst --xref -o .\objects\exp1.o --depend .\objects\exp1.d)

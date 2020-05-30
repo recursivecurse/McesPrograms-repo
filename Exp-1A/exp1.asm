@@ -1,5 +1,20 @@
 
-	AREA RESET, CODE
+	
+
+
+	AREA RESET,CODE    
+	ENTRY
+	
+	MOV R0, #01;A
+	MOV R1, #02;B
+	
+	ADD R0,R1,R0,LSL #1
+	
+STOP B STOP					
+	END					
+// A = 2*A + B
+
+/*AREA RESET, CODE    
 	ENTRY
 	
 	MOV R0,#00
@@ -11,5 +26,5 @@
 	
 STOP B STOP
 	END
-
+*/
 //A = B + C - D 
