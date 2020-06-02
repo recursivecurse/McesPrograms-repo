@@ -1,0 +1,25 @@
+	AREA RESET , CODE
+	ENTRY
+	
+	MOV R0 ,#00
+	MOV R1 ,#01;A
+	MOV R2 ,#02;B
+	MUL R3 , R2 , R2; B^2
+	MUL R4 , R1,R1 ; A^2
+	MUL R5 , R4,R2; A^2*B
+	MUL R6 , R3,R1; B^2*A
+	MOV R9 ,#02
+	MOV R10 ,#03
+	
+	MOV R3 , R3 ,LSL #02
+	MLA R8 , R6,R10,R3; 4*B^2 + 3*B^2*A
+	MLA R7 , R5 ,R9 ,R4; A^2 + 2*A^2*B
+	ADD R0 , R7 , R8 ; FINAL EXP
+	
+	
+STOP B STOP
+	END
+		
+		
+	
+	

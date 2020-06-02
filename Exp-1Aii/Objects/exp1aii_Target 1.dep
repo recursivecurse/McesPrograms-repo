@@ -1,0 +1,2 @@
+Dependencies for Project 'exp1aii', Target 'Target 1': (DO NOT MODIFY !)
+F (.\exp1aii.asm)(0x5ED62801)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\exp1aii.lst --xref -o .\objects\exp1aii.o --depend .\objects\exp1aii.d)

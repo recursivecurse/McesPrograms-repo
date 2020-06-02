@@ -1,0 +1,86 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,CODE
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E59F003C        LDR              R0,=VAL1
+    5 00000004 E5901000        LDR              R1,[R0]
+    6 00000008 E5902004        LDR              R2,[R0,#4]
+    7 0000000C E59F0034        LDR              R0,=VAL2
+    8 00000010 E5903000        LDR              R3,[R0]
+    9 00000014 E5904004        LDR              R4,[R0,#4]
+   10 00000018 E0926004        ADDS             R6,R2,R4
+   11 0000001C E0A15003        ADC              R5,R1,R3
+   12 00000020 E59F0024        LDR              R0,=RESULT
+   13 00000024 E5806000        STR              R6,[R0]
+   14 00000028 E5805004        STR              R5,[R0,#4]
+   15 0000002C         
+   16 0000002C EAFFFFFE 
+                       STOP    B                STOP
+   17 00000030         
+   18 00000030 AAAAAAAA 
+              BBBBBBBB VAL1    DCD              &AAAAAAAA,&BBBBBBBB
+   19 00000038 CCCCCCCC 
+              DDDDDDDD VAL2    DCD              &CCCCCCCC,&DDDDDDDD
+   20 00000040 00000000 
+                       RESULT  DCD              &0
+   21 00000044                 END
+              00000000 
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\exp1aii.d -o.\objects\exp1aii.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include -IC:\Keil_v5\ARM\INC\Philips --predefine="__EVAL SETA 1" --pre
+define="__UVISION_VERSION SETA 528" --list=.\listings\exp1aii.lst exp1aii.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file exp1aii.asm
+   Uses
+      None
+Comment: RESET unused
+RESULT 00000040
+
+Symbol: RESULT
+   Definitions
+      At line 20 in file exp1aii.asm
+   Uses
+      At line 12 in file exp1aii.asm
+Comment: RESULT used once
+STOP 0000002C
+
+Symbol: STOP
+   Definitions
+      At line 16 in file exp1aii.asm
+   Uses
+      At line 16 in file exp1aii.asm
+Comment: STOP used once
+VAL1 00000030
+
+Symbol: VAL1
+   Definitions
+      At line 18 in file exp1aii.asm
+   Uses
+      At line 4 in file exp1aii.asm
+Comment: VAL1 used once
+VAL2 00000038
+
+Symbol: VAL2
+   Definitions
+      At line 19 in file exp1aii.asm
+   Uses
+      At line 7 in file exp1aii.asm
+Comment: VAL2 used once
+5 symbols
+339 symbols in table

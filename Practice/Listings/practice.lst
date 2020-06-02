@@ -1,0 +1,59 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET , CODE
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E3A00000        MOV              R0 ,#00
+    5 00000004 E3A01001        MOV              R1 ,#01     ;A
+    6 00000008 E3A02002        MOV              R2 ,#02     ;B
+    7 0000000C E0030292        MUL              R3 , R2 , R2 ; B^2
+    8 00000010 E0040191        MUL              R4 , R1,R1  ; A^2
+    9 00000014 E0050294        MUL              R5 , R4,R2  ; A^2*B
+   10 00000018 E0060193        MUL              R6 , R3,R1  ; B^2*A
+   11 0000001C E3A09002        MOV              R9 ,#02
+   12 00000020 E3A0A003        MOV              R10 ,#03
+   13 00000024         
+   14 00000024 E1A03103        MOV              R3 , R3 ,LSL #02
+   15 00000028 E0283A96        MLA              R8 , R6,R10,R3 
+                                                            ; 4*B^2 + 3*B^2*A
+   16 0000002C E0274995        MLA              R7 , R5 ,R9 ,R4 ; A^2 + 2*A^2*B
+                                                            
+   17 00000030 E0870008        ADD              R0 , R7 , R8 ; FINAL EXP
+   18 00000034         
+   19 00000034         
+   20 00000034 EAFFFFFE 
+                       STOP    B                STOP
+   21 00000038                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\practice.d -o.\objects\practice.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5
+\ARM\CMSIS\Include -IC:\Keil_v5\ARM\INC\Philips --predefine="__EVAL SETA 1" --p
+redefine="__UVISION_VERSION SETA 528" --list=.\listings\practice.lst practice.a
+sm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file practice.asm
+   Uses
+      None
+Comment: RESET unused
+STOP 00000034
+
+Symbol: STOP
+   Definitions
+      At line 20 in file practice.asm
+   Uses
+      At line 20 in file practice.asm
+Comment: STOP used once
+2 symbols
+334 symbols in table
